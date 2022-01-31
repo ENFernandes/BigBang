@@ -10,7 +10,7 @@ public class CoffeShop {
 
     ProdutosE cafe = ProdutosE.COFFE;
     ProdutosE beer = ProdutosE.BEER;
-    
+
     public CoffeShop()
     {
         System.out.printf("\n\n" + beer.getName() + " Preço: "+ beer.getPrice()+"€");
