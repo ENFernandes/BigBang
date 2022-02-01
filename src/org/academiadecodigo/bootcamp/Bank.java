@@ -1,12 +1,20 @@
 package org.academiadecodigo.bootcamp;
 
 public class Bank {
-    private float money=1000;
+    private float banck = 990;
+    private float wallet = 10;
 
-    public float getMoney() {
-        return money;
+    public float getBanck() {
+        return banck;
     }
-    public void setMoney(float money) {
-        this.money = money;
+    public void setBanck(float banck) {
+        this.banck = banck;
+    }
+
+    public float getWallet() {
+        return wallet;
+    }
+    public void setWallet(float wallet) {
+        this.wallet = wallet;
     }
 }

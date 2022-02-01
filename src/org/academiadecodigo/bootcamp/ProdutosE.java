@@ -1,8 +1,11 @@
 package org.academiadecodigo.bootcamp;
 
 public enum ProdutosE {
-    COFFE ("Cafe", 0.5f,12),
-    BEER ("Fino", 1f,12);
+    COFFE ("Cafe", 1f,12),
+    BEER ("Fino", 1f,12),
+    CHEESE("Queijo", 2.5f, 10),
+    HAM("Fimbre", 1.2f,3),
+    BREAD("Bread",0.1f,40);
     private String name;
     private float price;
     private int quant;

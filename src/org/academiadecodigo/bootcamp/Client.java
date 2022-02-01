@@ -5,10 +5,12 @@ public class Client {
     private String name;
     private int CC;
     private int contact;
-    Bank conta = new Bank();
 
-    public float getSaldo() {
-        return conta.getMoney();
+    Bank conta = new Bank();
+    public Client (String name, int cc, int contact) {
+        this.setName(name);
+        this.setContact(contact);
+        this.setCC(cc);
     }
 
     public String getName()
@@ -34,29 +36,42 @@ public class Client {
         this.contact = contact;
     }
 
-    public Client (String name, int cc, int contact)
+    public void addMoneyBanck(float money)
     {
-        this.setName(name);
-        this.setContact(contact);
-        this.setCC(cc);
+        conta.setBanck(conta.getBanck()+money);
     }
-
-    public void addMoney(float money)
-    {
-        conta.setMoney(conta.getMoney()+money);
-    }
-
-    public void dedMoney(float money)
-    {
-        if(conta.getMoney()-money>=0) {
-            conta.setMoney(conta.getMoney() - money);
+    public boolean dedMoneyBank(float money) {
+        if(conta.getBanck()-money>=0) {
+            conta.setBanck(conta.getBanck() - money);
+            return true;
         }
         else {
-            System.out.printf("\noperação negada");
+            System.out.println("\noperação negada");
+            return false;
         }
     }
 
+    public void addMoneyWallet(float money)
+    {
+        conta.setWallet(conta.getWallet()+money);
+    }
+    public boolean dedMoneyWallet(float money) {
+        if(conta.getWallet()-money>=0) {
+            conta.setWallet(conta.getWallet() - money);
+            return true;
+        }
+        else {
+            System.out.println("\nNão tens dinheiro na carteira");
+            return false;
+        }
+    }
 
+    public float getBanck() {
+        return conta.getBanck();
+    }
+    public float getWallet(){
+        return conta.getWallet();
+    }
 
 
 
